@@ -33,5 +33,21 @@ const { createApp } = Vue;
           ],
       }
     },
+    // metodo di navigazione immagini
+    methods: {
+      prevImage() {
+        this.activeImage--;
+        if(this.activeImage < 0) {
+          this.activeImage = this.slides.length - 1;
+        }
+      },
+
+      nextImage() {
+        this.activeImage++;
+        if(this.activeImage > this.slides.length - 1) {
+          this.activeImage = 0;
+        }
+      },
+    }
   }).mount('#app')
 
