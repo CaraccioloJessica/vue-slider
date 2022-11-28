@@ -48,6 +48,11 @@ const { createApp } = Vue;
           this.activeImage = 0;
         }
       },
+
+      // Bonus 1
+      thumbClickImg(i) {
+        this.activeImage = i;
+      }
     }
   }).mount('#app')
 
